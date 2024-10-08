@@ -112,6 +112,25 @@ This is the configuration file for `flake8`, a code linting tool. It defines the
 
 This structure ensures the project is well-organized, easy to maintain, and scalable. Each file has a clear role in developing, testing, deploying, and supporting the weather data API.
 
+## Endpoints Testing
+
+FastAPI's built-in Swagger UI
+- run `uvicorn app.main:app --reload`
+- Access Swagger UI: `http://127.0.0.1:8000/docs`
+- Test the **/api/v1/weather** endpoint with these params:
+```
+station_id: Filter by station ID (e.g., USC00110072)
+date: Filter by date (e.g., 1985-01-19)
+skip: Number of records to skip for pagination.
+limit: Number of records to return.
+```
+- Test the **/api/v1/weather/stats** endpoint with these params:
+```
+station_id: Filter by station ID (e.g., USC00110072)
+year: Filter by year (e.g., 1985)
+skip: Number of records to skip for pagination.
+limit: Number of records to return.
+```
 
 ## Deployment on AWS
 
