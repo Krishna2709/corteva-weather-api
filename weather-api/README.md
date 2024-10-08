@@ -115,8 +115,11 @@ This structure ensures the project is well-organized, easy to maintain, and scal
 
 ## Deployment on AWS
 
-- RDS (PostgreSQL): Managed database service for hosting the weather data.
-- EC2 or AWS Lambda: For hosting the ingestion and API code.
-- S3: Store raw weather data files for long-term storage and ingestion automation.
-- CloudWatch: Monitor logs, schedule ingestion tasks with CloudWatch Events or Lambda scheduled functions.
+I will be using the following AWS services to host this app - 
+
+- RDS (PostgreSQL): Managed database service for weather data hosting.
 - API Gateway: Provide a scalable, managed REST API endpoint.
+- EC2 or AWS Lambda: This hosts the ingestion and API code.
+- ALB: For load balancing.
+- S3: Store raw weather data files for long-term storage and ingestion automation.
+- CloudWatch: Monitor logs and schedule ingestion tasks with CloudWatch Events or Lambda scheduled functions.
