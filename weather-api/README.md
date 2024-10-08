@@ -1,13 +1,10 @@
-
-
-
-
 # Project Directory Overview
 
-This project contains multiple files and directories, each serving a specific purpose in developing, testing, and running the weather API. Below is a description of each file and directory and their roles.
+The project contains multiple files and directories, each serving a specific purpose in developing, testing, and running the weather API. Below is a description of each file and directory and their roles.
 
 ## Project Structure
 
+```
 weather-api/
 ├── app/
 │   ├── __init__.py
@@ -35,8 +32,7 @@ weather-api/
 ├── requirements.txt
 ├── README.md
 └── .flake8  # Linter configuration file
-
-
+```
 
 ---
 
@@ -85,18 +81,18 @@ This folder contains utility scripts used for data processing.
 - **`analyze_data.py`**: This script calculates yearly weather statistics (such as average maximum temperature and total precipitation) for each weather station and stores them in the database.
 
 ### `.github/`
-This folder contains configuration files for GitHub Actions, which is used for Continuous Integration (CI) and Continuous Deployment (CD) pipelines.
+This folder contains configuration files for GitHub Actions, which are used for Continuous Integration (CI) and Continuous Deployment (CD) pipelines.
 
-- **`workflows/ci.yml`**: Defines a GitHub Actions workflow for running tests, linting code, and checking the format of the project whenever code is pushed to GitHub.
+- **`workflows/ci.yml`**: This defines a GitHub Actions workflow for running tests, linting code, and checking the project's format whenever code is pushed to GitHub.
 
 ### `Dockerfile`
-This file contains the instructions to build a Docker image for the project. Docker allows the application to run in a consistent environment across different machines. This file describes how to set up the environment, install dependencies, and start the FastAPI server inside a Docker container.
+This file contains the instructions on how to build a Docker image for the project. Docker allows the application to run in a consistent environment across different machines. This file describes setting up the environment, installing dependencies, and starting the FastAPI server inside a Docker container.
 
 ### `requirements.txt`
 A list of Python dependencies that are required for the project. It includes libraries like FastAPI, SQLAlchemy, and Pydantic. When setting up the project, you can install these dependencies using `pip install -r requirements.txt`.
 
 ### `README.md`
-This file contains an overview of the project, how to install and run it, and any other important information needed by developers or users to understand and use the project.
+This file contains an overview of the project, instructions for installing and running it, and any other important information needed by developers or users to understand and use the project.
 
 ### `.flake8`
 This is the configuration file for `flake8`, a code linting tool. It defines the rules and settings for linting the Python code in the project, such as the maximum line length and which files or directories to ignore.
@@ -114,10 +110,10 @@ This is the configuration file for `flake8`, a code linting tool. It defines the
 - **`README.md`**: Overview and instructions for the project.
 - **`.flake8`**: Linting configuration for maintaining code quality.
 
-This structure ensures that the project is well-organized, easy to maintain, and scalable. Each file has a clear role in developing, testing, deploying, and maintaining the weather data API.
+This structure ensures the project is well-organized, easy to maintain, and scalable. Each file has a clear role in developing, testing, deploying, and supporting the weather data API.
 
 
-### Deployment on AWS
+## Deployment on AWS
 
 - RDS (PostgreSQL): Managed database service for hosting the weather data.
 - EC2 or AWS Lambda: For hosting the ingestion and API code.
